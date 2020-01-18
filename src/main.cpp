@@ -11,5 +11,7 @@ int main(int argc, char *argv[])
 
     qDebug() << "Hello World";
 
+    QDEBUG << "Added my first feature branch - BFW";
+
     return a.exec();
 }
