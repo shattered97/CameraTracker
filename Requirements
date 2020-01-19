@@ -1,0 +1,7 @@
+Requirements
+    • Identify a single dog up to 150’ away
+    • Position the camera to keep the target within the image
+        ◦ Exception – If the target is momentarily inside of or behind an object, the camera must be able to reacquire once visual is reestablished
+    • Power supply shall be easily changed/replaced
+    • Power supply shall be at least one battery
+    • A secondary device may be used in conjunction with the automated mount for final video capture (Aka Christina’s iPhone)
