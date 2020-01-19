@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
     QDEBUG << "Added my first feature branch - BFW";
 
-    QDEBUG << "Added my test branch - TQ";
+    QDEBUG << "Added my test branch - TQ - Changed";
 
     return a.exec();
 }
