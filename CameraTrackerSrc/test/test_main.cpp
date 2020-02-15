@@ -1,10 +1,13 @@
 #include <Arduino.h>
 #include <unity.h>
 
-// void setUp(void)
-// {
-//     //setup stuff here
-// }
+String STR_TO_TEST;
+
+void setUp(void)
+{
+    //setup stuff here
+    STR_TO_TEST = "Hello World";
+}
 
 // void tearDown(void)
 // {
@@ -32,14 +35,14 @@ void setup()
 {
     //Wait for > 2 seconds
     //if board does not support reset via Serial.DTR/RTS
-    delay(4000);
+    delay(1000 * 10);
 
     UNITY_BEGIN();
     RUN_TEST(testLedBuiltinPinNumber);
 
     pinMode(LED_BUILTIN, OUTPUT);
-    Serial.begin(115200);
-    Serial.print("Hello");
+ 
+    
 }
 
 u_int8_t i = 0;
@@ -47,15 +50,15 @@ u_int8_t max_blinks = 5;
 
 void loop()
 {
-    if(i < max_blinks)
+    for(int i = 0; i < max_blinks; ++i)
     {
         RUN_TEST(testLedStateHigh);
         delay(500);
         RUN_TEST(testLedStateLow);
         delay(500);
-        i++;
-    }
-
-    UNITY_END();   
+    }  
+        UNITY_END();   
+  
+    
   
 }

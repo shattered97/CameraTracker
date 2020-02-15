@@ -3,7 +3,13 @@
 void setup() 
 {
   // put your setup code here, to run once:
+
+  delay(1000 * 5);
+  
+
     pinMode(13, OUTPUT);
+    Serial.begin(115200);
+    Serial.print("Hello World");
 }
 
 void loop() {
@@ -12,4 +18,5 @@ void loop() {
   delay(1000);                       // wait for a second
   digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);                       // wait for a second
+  Serial.println("Hello Bob");
 }
