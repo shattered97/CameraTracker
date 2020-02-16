@@ -14,7 +14,7 @@ void setup()
      
 }
 
-u_int8_t max_blinks = 5;
+int max_blinks = 5;
 
 void loop()
 {
