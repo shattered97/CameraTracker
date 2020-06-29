@@ -2,6 +2,9 @@
 **Development Environment used for this project:**
   - Atmel Studio 7.0
     - Visual Micro 2020.321.2
+  - Libraries Used
+    - https://github.com/mikalhart/TinyGPSPlus
+    - https://github.com/adafruit/RadioHead
 
   
 **Hardware used for this project:**
