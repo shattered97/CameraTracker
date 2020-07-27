@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For MotorControls
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+MotorControls	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+pinSetup	KEYWORD2
+fullStep	KEYWORD2
+motorWait	KEYWORD2
+turnMotorOn	KEYWORD2
+moveMotor	KEYWORD2
+changePosition	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
