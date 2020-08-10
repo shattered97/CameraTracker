@@ -115,6 +115,7 @@ void MotorControls::moveMotor(int moveSteps, enum direction, int stepSize = 0)
 		}
 		else
 		{
+			Serial.print("Not a valid direction");
 			//TODO: Warning that it did not work
 		}
 	}
