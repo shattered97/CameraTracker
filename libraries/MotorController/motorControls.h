@@ -8,6 +8,7 @@
 #include <Arduino.h>
 #include "MotorControllerConstants.h"
 
+// Manager class for stepper motor control
 class MotorControls
 {
 
