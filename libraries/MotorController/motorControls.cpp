@@ -94,7 +94,7 @@ void MotorControls::turnMotorOn()
 // param [in] moveSteps 		  - Number of steps between current position and desired new position
 // param [in] direction 		  - Enum indicates direction (reverse: 0/forward: 1/unknown: 2/total: 3) of travel
 // param [in] stepSize (Optional) - Number defining size of step (default: 0)
-void MotorControls::moveMotor(int moveSteps, enum direction, int stepSize = 0)
+void MotorControls::moveMotor(int moveSteps, enum direction, enum stepSize = 0)
 {
 	// Prepare the Motor for movement we need direction and number of steps
 	digitalWrite(DIR,direction);  // set the direction high is left low is r5ight
@@ -102,7 +102,23 @@ void MotorControls::moveMotor(int moveSteps, enum direction, int stepSize = 0)
 	// Lets move the specified number of steps	
 	for(int i = 0; i < moveSteps; ++i)
 	{
-		fullStep();				// Simplicity allow only full step option. Half, quarter and eighth also possible
+		// Determine travel distance per step
+		// Default to eighth of maximum distance
+		switch stepSize
+		{
+			case 0:
+				fullStep();
+				break;
+			case 1:
+				halfStep();
+				break;
+			case 2:
+				quarterStep();
+				break;
+			default:
+				eighthStep();
+				break;
+		}
 		
 		// Decide which way the motor must move to make currentPosition become desiredPosition
 		if (direction == 0)
@@ -115,8 +131,8 @@ void MotorControls::moveMotor(int moveSteps, enum direction, int stepSize = 0)
 		}
 		else
 		{
+			//Warning that direction was not recognized
 			Serial.print("Not a valid direction");
-			//TODO: Warning that it did not work
 		}
 	}
 }

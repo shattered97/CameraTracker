@@ -1,7 +1,6 @@
 #ifndef MotorControllerConstanst_h
 #define MotorControllerConstanst_h
 
-
 /**************************************************************************************************/
 // RMF69 Adafruit board
 
@@ -22,7 +21,6 @@
 #define	RMF69_SLP = 19 //PIN A5 //Do not use pinmode for DAC // Valid Values Pin H or L
 /*******************************************************************************************************/
 
-
 //Live Code
 #define MS1    = RMF69_MS1
 #define	MS2    = RMF69_MS2
@@ -41,8 +39,15 @@ namespace stepper
 		total   = 3
 		
 	};
+	enum stepSize
+	{
+		full 	= 0,
+		half 	= 1,
+		quarter = 2,
+		eighth  = 3,
+		total 	= 6
+	};
 }
-
 
 #endif
 

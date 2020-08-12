@@ -12,11 +12,8 @@ MotorControls	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-pinSetup	KEYWORD2
-fullStep	KEYWORD2
-motorWait	KEYWORD2
-turnMotorOn	KEYWORD2
-moveMotor	KEYWORD2
+initialize	KEYWORD2
+motorControls	KEYWORD2
 changePosition	KEYWORD2
 
 #######################################

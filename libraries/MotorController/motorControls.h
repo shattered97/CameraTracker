@@ -8,14 +8,13 @@
 #include <Arduino.h>
 #include "MotorControllerConstants.h"
 
-
 class MotorControls
 {
 
 private:
 	int positionDifference;
 
-	// Step length functions. Full step default
+	// Step length functions. Eighth step default
 	void fullStep();
 	void halfStep();
 	void quarterStep();
@@ -25,17 +24,16 @@ private:
 	// param [in] moveSteps 		  - Number of steps between current position and desired new position
 	// param [in] direction 		  - Enum indicates direction (reverse: 0/forward: 1/unknown: 2/total: 3) of travel
 	// param [in] stepSize (Optional) - Number defining size of step (default: 0)
-    void moveMotor(int moveSteps, enum direction, int stepSize = 0);
+    void moveMotor(int moveSteps, enum direction, enum stepSize = 0);
 	void pinSetup(); //Setup the pins per the MotorControllerConstants.h file
     void turnMotorOn();
-	
 	
 public:
 	// Class declaration
     motorControls();
 	
 	// Remove low power condition and allow operation
-    Initalize();
+    initalize();
 	
 	// Takes the input of where the focus currently is and where it must move to in repect to the range of travel. Units are NOT degrees
 	// 1 step = 33.8°
